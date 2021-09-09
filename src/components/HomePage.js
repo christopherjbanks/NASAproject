@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Post from "./Post";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import Loading from "./Loading";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -20,18 +21,49 @@ const HomePage = () => {
   }, []);
 
   return (
-    <Wrapper>
-      {dailyPics &&
-        dailyPics.map((element, index) => <Post pic={element} key={index} />)}
-    </Wrapper>
+    <>
+      {!dailyPics && <Loading />}
+      {dailyPics && (
+        <Wrapper>
+          <h1 style={{ padding: "20px" }}>Spacestagram</h1>
+          <PostWrapper>
+            {dailyPics.map((element, index) => (
+              <Post pic={element} key={index} />
+            ))}
+          </PostWrapper>
+        </Wrapper>
+      )}
+    </>
   );
 };
 
 export default HomePage;
 
+const animation = keyframes`
+from {
+  opacity: 0
+}
+to {
+  opacity: 1
+}
+`;
+
+const PostWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`;
 const Wrapper = styled.div`
-  background-color: #d3d3d3;
+  position: absolute;
+  margin: 2em auto 4em;
+  top: 0;
+  background-color: rgba(211, 211, 211, 0.8);
+  margin-left: 10vw;
+  margin-right: 10vw;
   margin-top: 0;
-  width: 540px;
+  width: 1580px;
+  max-width: 90vw;
   padding: 10px;
+  z-index: 5;
+  animation: ${animation} 1s linear;
 `;
