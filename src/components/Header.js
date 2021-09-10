@@ -64,7 +64,7 @@ const Header = () => {
                 Link to Chris Banks' Github
               </span>
             </Link>
-            <Link href="ttps://codepen.io/chris_jb">
+            <Link href="https://codepen.io/chris_jb">
               <FiCodepen
                 style={{ margin: "0", height: "25px", width: "25px" }}
               />
