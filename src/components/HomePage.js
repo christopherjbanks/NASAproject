@@ -9,7 +9,7 @@ const HomePage = () => {
   const [dailyPics, setDailyPics] = useState(null);
 
   useEffect(() => {
-    fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=10`)
+    fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=12`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -52,6 +52,7 @@ const PostWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 `;
 const Wrapper = styled.div`
   position: absolute;
@@ -61,8 +62,8 @@ const Wrapper = styled.div`
   margin-left: 10vw;
   margin-right: 10vw;
   margin-top: 0;
-  width: 1580px;
-  max-width: 90vw;
+  width: 100%;
+  max-width: 80vw;
   padding: 10px;
   z-index: 5;
   animation: ${animation} 1s linear;
