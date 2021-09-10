@@ -6,7 +6,7 @@ const Header = () => {
   const [stars, setStars] = useState([]);
   const [size, setSize] = useState({
     x: window.innerWidth,
-    y: 100, // fixed height of header
+    y: 70, // fixed height of header
   });
 
   const updateSize = () =>
@@ -91,9 +91,11 @@ const Header = () => {
 export default Header;
 
 const Container = styled.div`
-  position: relative;
+  position: sticky;
+  top: 0;
   padding: 20px;
   background: black;
+  z-index: 10;
 `;
 
 const Star = styled.div`

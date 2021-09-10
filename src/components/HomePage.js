@@ -57,7 +57,7 @@ const Wrapper = styled.div`
   position: absolute;
   margin: 2em auto 4em;
   top: 0;
-  background-color: rgba(211, 211, 211, 0.8);
+  background-color: rgb(211, 211, 211);
   margin-left: 10vw;
   margin-right: 10vw;
   margin-top: 0;
