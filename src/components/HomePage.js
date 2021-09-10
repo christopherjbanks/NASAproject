@@ -55,9 +55,8 @@ const PostWrapper = styled.div`
   justify-content: space-evenly;
 `;
 const Wrapper = styled.div`
-  position: absolute;
-  margin: 2em auto 4em;
-  top: 0;
+  /* margin: 2em auto 4em; */
+
   background-color: rgb(211, 211, 211);
   margin-left: 10vw;
   margin-right: 10vw;

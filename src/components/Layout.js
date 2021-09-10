@@ -5,8 +5,7 @@ const Layout = () => {
   return (
     <div
       style={{
-        position: "relative",
-        height: "100vh",
+        height: "100%",
       }}
     >
       <HomePage />
