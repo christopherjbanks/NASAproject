@@ -42,7 +42,8 @@ const Container = styled.div`
 `;
 
 const Image = styled.img`
-  max-width: 460px;
+  max-width: 100%;
+
   height: auto;
   margin-bottom: 10px;
 `;

@@ -80,7 +80,7 @@ const Header = () => {
             </Link>
           </Icons>
         </LineIconWrapper>
-        <h2 style={{ color: "white" }}>Spacestagram</h2>
+        <HeaderTitle>Spacestagram</HeaderTitle>
       </div>
     </Container>
   );
@@ -94,6 +94,13 @@ const Container = styled.div`
   padding: 20px;
   background: black;
   z-index: 10;
+`;
+
+const HeaderTitle = styled.h2`
+  color: white;
+
+  @media only screen and (max-width: 700px) {
+  }
 `;
 
 const Star = styled.div`
@@ -120,12 +127,20 @@ const LineIconWrapper = styled.div`
   margin-left: 20px;
   width: 100%;
   animation: ${slideRight} 1s cubic-bezier(0.61, 0.11, 0.27, 0.89);
+
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
 `;
 
 const Line = styled.div`
   height: 2px;
   width: 175px;
   background-color: gray;
+
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
 `;
 
 const Icons = styled.nav`
