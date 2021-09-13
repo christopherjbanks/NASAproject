@@ -38,7 +38,7 @@ const Header = () => {
                 width: `${element}px`,
                 position: "absolute",
                 left: `${size.x * Math.random()}px`,
-                top: `${size.y * Math.random()}px`,
+                top: `${(size.y - element * 2) * Math.random()}px`,
               }}
             />
           );
