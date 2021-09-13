@@ -19,10 +19,8 @@ const Header = () => {
   useEffect(() => {
     let array = [];
     for (let i = 0; i < 100; i++) {
-      console.log("looping");
-      // // set random star height/width
+      // set random star height/width
       array = [...array, Math.round(Math.random() * 10)];
-      console.log(array);
       if (i === 99) {
         setStars(array);
       }

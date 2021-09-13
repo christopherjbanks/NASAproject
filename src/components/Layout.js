@@ -2,15 +2,7 @@ import React from "react";
 import HomePage from "./HomePage";
 
 const Layout = () => {
-  return (
-    <div
-      style={{
-        height: "100%",
-      }}
-    >
-      <HomePage />
-    </div>
-  );
+  return <HomePage />;
 };
 
 export default Layout;

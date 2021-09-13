@@ -26,6 +26,10 @@ const HomePage = () => {
       {dailyPics && (
         <Wrapper>
           <h1 style={{ padding: "20px" }}>Spacestagram</h1>
+          <h3 style={{ paddingLeft: "20px", color: "#565656" }}>
+            A selection of 12 random pictures from NASA's Astronomy Picture of
+            the Day (APOD) API
+          </h3>
           <PostWrapper>
             {dailyPics.map((element, index) => (
               <Post pic={element} key={index} />
@@ -58,11 +62,11 @@ const Wrapper = styled.div`
   /* margin: 2em auto 4em; */
 
   background-color: rgb(211, 211, 211);
-  margin-left: 10vw;
-  margin-right: 10vw;
+  margin-left: 4vw;
+  margin-right: 4vw;
   margin-top: 0;
   width: 100%;
-  max-width: 80vw;
+  max-width: 92vw;
   padding: 10px;
   z-index: 5;
   animation: ${animation} 1s linear;
