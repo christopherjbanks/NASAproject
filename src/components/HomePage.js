@@ -12,7 +12,6 @@ const HomePage = () => {
     fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=12`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setDailyPics(data);
       })
       .catch((error) => {

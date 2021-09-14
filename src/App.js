@@ -2,8 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import GlobalStyles from "./GlobalStyles";
-import ErrorPage from "./components/ErrorPage";
-import Layout from "./components/Layout";
+import HomePage from "./components/HomePage";
 import styled from "styled-components";
 
 function App() {
@@ -14,11 +13,9 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/">
-            <Layout />
+            <HomePage />
           </Route>
-          <Route path="">
-            <ErrorPage />
-          </Route>
+          {/* Other pages here */}
         </Switch>
       </Container>
     </BrowserRouter>

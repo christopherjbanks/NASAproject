@@ -12,6 +12,7 @@ const Post = ({ pic }) => {
     <Container>
       <div>
         <Image src={pic.url} alt="NASA image of the day" />
+        <h3>{pic.title}</h3>
         <HeaderInfo>
           <h4>{pic.date}</h4>
           <h4>{pic.copyright}</h4>
@@ -52,6 +53,7 @@ const HeaderInfo = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  margin-top: 10px;
 `;
 
 const Button = styled.button`
